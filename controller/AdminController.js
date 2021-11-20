@@ -1,6 +1,5 @@
 const Admin = require("../models/AdminModel");
 const bcrypt = require('bcryptjs');
-const {roles} = require('../roles/roles');
 
 module.exports = function(){
     /***************/

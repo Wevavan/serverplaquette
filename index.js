@@ -25,6 +25,8 @@ require("./routes/admins.routes")(app)
 require("./routes/entreprise.routes")(app)
 require("./routes/CampusPartenaires.routes")(app)
 require("./routes/Certification.routes")(app)
+require("./routes/finances.routes")(app)
+require("./routes/blocompetence.routes")(app)
 
 //LISTENER
 app.listen(PORT, () => console.log("Run on port : ", PORT))

@@ -1,4 +1,4 @@
-const Admin = require("../models/AdminModel");
+const Admin = require('../models/AdminModel');
 const bcrypt = require('bcryptjs');
 
 module.exports = function(){
@@ -32,6 +32,5 @@ module.exports = function(){
     //Delete one
     this.deleteAdmin = async function (id){
         return Admin.deleteOne({_id: id})    
-    }
-      
+    } 
 }

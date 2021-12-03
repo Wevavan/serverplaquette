@@ -8,6 +8,8 @@ const bcrypt = require('bcryptjs');
 module.exports = (app) => {
     //CREATE
     app.post(`/api/admins/add`, async (req, res) => {
+        Admin.allowIfLoggedin
+        Admin.grantAccess('createAny', 'profile')
         const {body} = req
         try {
             const response = await Admin.createOne(body)
@@ -81,6 +83,4 @@ module.exports = (app) => {
            handleError(err,res) 
         }
     })
-    // app.allowIf(`api/admin/allowIf`, Admin.allowIfLoggedin)
-
 }
